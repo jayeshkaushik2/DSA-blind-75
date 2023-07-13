@@ -1,7 +1,19 @@
+from collections import defaultdict
+
 List = list
 
 
 def groupAnagrams(strs: List[str]) -> List[List[str]]:
+    anagrams = defaultdict(list)
+    for ele in strs:
+        count = [0] * 26
+        for ch in ele:
+            count[ord(ch) - ord("a")] += 1
+
+        anagrams[tuple(count)].append(ele)
+
+    return anagrams.values()
+
     # time comp O(N^2 * 100.log(100)) space comp O(N) + O(N)
     res = []
     n = len(strs)
