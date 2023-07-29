@@ -11,6 +11,7 @@ class ListNode(object):
 
     def print_nodes(self):
         root = self
+        print("Linked List", end=": ")
         while root:
             print(root.val, end=" ")
             root = root.next
