@@ -6,17 +6,17 @@ def reverseList(head):
     :type head: ListNode
     :rtype: ListNode
     """
-    if not head:
-        return None
+    # if not head:
+    #     return None
 
-    newNext = head.next
-    if newNext:
-        temp = reverseList(head.next)
-        head.next.next = temp
-        print(temp)
-    newNext = head
+    # newNext = head.next
+    # if newNext:
+    #     temp = reverseList(head.next)
+    #     head.next.next = temp
+    #     print(temp)
+    # newNext = head
 
-    return head
+    # return head
 
     # time comp O(N) space comp O(1)
     prev = None
