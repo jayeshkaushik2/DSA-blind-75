@@ -48,4 +48,4 @@ class TreeNode:
             dfs(cur_node=cur_node.left)
             dfs(cur_node=cur_node.right)
 
-        return dfs(self)
+        return dfs(self.root)
